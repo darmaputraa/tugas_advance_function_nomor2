@@ -1,0 +1,21 @@
+// Soal Advance Function No 1
+// a. Menerima 2 parameter
+Future<List<String>> getSocmed() async {
+  List<String> socmed = ['Facebook', 'Twitter'];
+  //Variable sementara untuk menampung hasil duplikasi List
+  List<String> socmedResult = [];
+
+  await Future.delayed(Duration(seconds: 1), () {
+    // Looping
+    for (var i = 0; i < socmed.length; i++) {
+      // Tiap perulangan, kalikan dengan pengali, simpan hasilnya ke variable sementara = Result
+      socmedResult.add('${socmed[i]} ' * 4);
+    }
+  });
+
+  return socmedResult;
+}
+
+void main() async {
+  print(await getSocmed());
+}
