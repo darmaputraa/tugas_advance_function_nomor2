@@ -1,0 +1,32 @@
+/// Soal Advance Function No 2
+
+void main () {
+  /// Product Hp(String),
+  /// Seri HP(String),
+  /// Warna(String)
+//  List<List<String>> listProduct = [
+//    ['Xiaomi', 'Redmi 9', 1500000],
+//    ['Samsung', 'Galaxy 5', 2000000],
+//    ['Vivo', 'v15 Pro', 3500000]
+//  ];
+
+  List<List<String>> product = [
+    ['Xiaomi', 'Redmi 9', 'Hijau'],
+    ['Samsung', 'Galaxy 5', 'Hitam'],
+    ['Vivo', 'v15 Pro', 'Merah']
+  ];
+
+  product.forEach((element) {
+  print(element);
+  });
+
+//  Map
+//  Xiaomi, Redmi 9, Hijau
+  Map<String, String> Product = {
+    'jenisProduct': 'Xiaomi',
+    'seri': 'Redmi 9',
+    'warna': 'Hijau',
+  };
+  print(Product);
+
+}
