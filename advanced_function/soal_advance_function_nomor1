@@ -1,0 +1,33 @@
+// Soal Advance Function No 1
+// a. Function asynchronous, menerima 2 parameter listData dan pengali
+Future<List<String>> getAllSocmed(
+  List<String> socmed, int pengali) async {
+//Variable sementara untuk menampung hasil duplikasi List
+  List<String> socmedResult = [];
+
+  // b. Perulangan secara asynchronous, dan tunggu sampai looping selesai gunakan await di depan delay
+  await Future.delayed(Duration(seconds: 1), () {
+    // Looping 
+    for (var i = 0; i < socmed.length; i++) {
+      // c. Mengalikan perulangan dengan pengali, dan hasilnya simpan ke variable sementara (socmedResult)
+      socmedResult.add('${socmed[i]} ' * pengali);
+    }
+  });
+  
+// D. return result
+  return socmedResult;
+}
+
+// List<String> socmed = [];
+
+// Future<void> getSocmed() async {
+//   for (var i = 1; i <= socmed.length; i++) {
+//     socmed.add(socmed[i]);
+//   }
+// }
+
+
+void main() async {
+
+  print(await getAllSocmed(['Twitter', 'Facebook', 'Instagram'], 2));
+}
